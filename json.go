@@ -8,12 +8,12 @@ import (
 )
 
 type response1 struct {
-	Page int
+	Page   int
 	Fruits []string
 }
 
 type response2 struct {
-	Page int `json:"page"`
+	Page   int      `json:"page"`
 	Fruits []string `json:"fruits"`
 }
 
@@ -39,14 +39,14 @@ func main() {
 	fmt.Println(string(mapB))
 
 	res1D := &response1{
-		Page: 1,
+		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"},
 	}
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B))
 
 	res2D := &response2{
-		Page: 1,
+		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"},
 	}
 	res2B, _ := json.Marshal(res2D)
